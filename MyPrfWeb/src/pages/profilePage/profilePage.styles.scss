@@ -1,0 +1,271 @@
+.container {
+  min-width: 90vw;
+  max-width: 90vw;
+  min-height: 950px;
+
+  margin: 100px auto;
+
+  border-radius: 15px;
+  overflow: hidden;
+  
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.397);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(185, 185, 185) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .background {
+    min-width: 100%;
+    min-height: 250px;
+    border-bottom: 1px solid black;
+
+    position: relative;
+
+    background-color: red;
+    background: url("../../assets/luke-stackpoole-pI4DSTLXD0E-unsplash.jpg");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .editLogOut {
+      transition: color 0.2s;
+      &:hover {
+        color: #1cfeba;
+      }
+    }
+
+    .searchbar {
+      position: absolute;
+      background-color: #153536;
+      top: 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      border: 1 px solid black;
+      box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.397);
+
+      form input {
+        padding-left: 10px;
+        min-height: 25px;
+        border: 0;
+        background-color: transparent;
+        min-width: 250px;
+        color: white;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      form button {
+        border: none;
+        border-left: 1px solid black;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        width: 70px;
+        height: 30px;
+        background-color: white;
+        border-bottom-right-radius: 8px;
+
+        transition: 0.4s;
+        &:hover {
+          border: 1 px solid white;
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+
+    #users-found {
+      position: absolute;
+      top: 32px;
+      z-index: 1;
+      background-color: #193e3f;
+      margin-top: -2px;
+      margin-left: -67px;
+      width: 250px;
+    }
+
+    #users-found li {
+      width: 240px;
+      height: 50px;
+      margin-left: -41px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      color: #fff;
+      cursor: pointer;
+      border-bottom: 1px solid #fff;
+    }
+
+    .edit {
+      top: 0;
+      right: 0;
+
+      position: absolute;
+
+      color: white;
+
+      text-decoration: none;
+
+      margin-top: 35px;
+      margin-right: 35px;
+
+      transition: color 0.2s;
+      &:hover {
+        color: #1cfeba;
+      }
+    }
+
+    img {
+      bottom: -20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      position: absolute;
+
+      box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.397);
+    }
+  }
+  h2 {
+    margin-top: 40px;
+    border-bottom: 1px solid black;
+  }
+
+  .main {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    min-width: 90%;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.397);
+    background-color: white;
+
+    .bio {
+      margin: 50px;
+      margin-bottom: 50px;
+      padding: 15px;
+      border-radius: 5px;
+
+      background-color: rgba(128, 128, 128, 0.424);
+    }
+
+    .sections {
+      margin-bottom: 50px;
+
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      color: white;
+
+      .section {
+        margin: 10px 10px;
+
+        min-width: 250px;
+        min-height: 200px;
+
+        border-radius: 5px;
+
+        background-color: #28ad71;
+
+        transition: transform ease-in-out 0.4s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        ul {
+          list-style: none;
+
+          li a {
+            text-decoration: none;
+            color: white;
+
+            transition: 0.2s;
+
+            &:hover {
+              transform: translateX(10);
+              color: #1cfeba;
+            }
+          }
+        }
+
+        .titleSection {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  footer {
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 200px;
+    margin-top: 80px;
+
+    padding-top: 35px;
+    text-align: center;
+    
+    color: white;
+    background-color:#146e46;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: #1cfeba;
+        border-bottom: 1px solid #1cfeba;
+      }
+    }
+  }
+
+  @media (max-width: 5000px) {
+    .section {
+      min-width: 400px;
+    }
+    
+  }
+  @media (max-width: 1434px) {
+    .section {
+      min-width: 250px;
+    }
+    
+  }
+
+  @media (max-width: 1335px) {
+    .section {
+      min-width: 200px;
+    }
+  }
+
+  @media (max-width: 976px) {
+    .section {
+      min-width: 350px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+
